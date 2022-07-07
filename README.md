@@ -1,6 +1,6 @@
 # Eat-with-Nymble
 
-## Problem 
+## Problem Statement
 
 1. We are implementing a cruise control software. In that software there is a class called `ThrottleController`. 
 2. This class has a setter for requested cruise speed and a method to calculate the throttle speed given the current speed of the vehicle. 
