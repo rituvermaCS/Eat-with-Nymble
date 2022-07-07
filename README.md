@@ -1,4 +1,4 @@
-# Eat-with-Nymble
+# Eat with Nymble
 
 ## Problem Statement
 
