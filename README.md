@@ -1,9 +1,11 @@
 # Eat-with-Nymble
 
-1. We are implementing a cruise control software. In that software there is a class called `ThrottleController`. \
-2. This class has a setter for requested cruise speed and a method to calculate the throttle speed given the current speed of the vehicle. \
-3. This method `calculateThrottle` takes the current speed as an argument and uses the class data member `cruiseSpeed` to calculate the throttle speed which maintains the vehicle at the given cruise speed. \
-4. The method also uses an implementation of the interface `Quantizer<Integer>` . \
+## Problem 
+
+1. We are implementing a cruise control software. In that software there is a class called `ThrottleController`. 
+2. This class has a setter for requested cruise speed and a method to calculate the throttle speed given the current speed of the vehicle. 
+3. This method `calculateThrottle` takes the current speed as an argument and uses the class data member `cruiseSpeed` to calculate the throttle speed which maintains the vehicle at the given cruise speed. 
+4. The method also uses an implementation of the interface `Quantizer<Integer>` . 
 5. This interface has a method `quantize` .
     - What does it do?
         1. It takes an integer belonging to a continuous range and then converts (quantize) it into one of the 7 levels which in our case 7 different level of throttle.
