@@ -1,15 +1,14 @@
 # Eat-with-Nymble
 
-1. We are implementing a cruise control software. In that software there is a class called `ThrottleController`.
-2. This class has a setter for requested cruise speed and a method to calculate the throttle speed given the current speed of the vehicle.
-3. This method `calculateThrottle` takes the current speed as an argument and uses the class data member `cruiseSpeed` to calculate the throttle speed which maintains the vehicle at the given cruise speed.
-4. The method also uses an implementation of the interface `Quantizer<Integer>` .
+1. We are implementing a cruise control software. In that software there is a class called `ThrottleController`. \
+2. This class has a setter for requested cruise speed and a method to calculate the throttle speed given the current speed of the vehicle. \
+3. This method `calculateThrottle` takes the current speed as an argument and uses the class data member `cruiseSpeed` to calculate the throttle speed which maintains the vehicle at the given cruise speed. \
+4. The method also uses an implementation of the interface `Quantizer<Integer>` . \
 5. This interface has a method `quantize` .
     - What does it do?
         1. It takes an integer belonging to a continuous range and then converts (quantize) it into one of the 7 levels which in our case 7 different level of throttle.
         2. The relation of the input of the quantize method with the output is shown below, where x-axis is the input and y-axis is the output for all input greater than 70 the method should return 7 and for all negative integers the method should return 0.
         
-        ![Screenshot from 2021-09-29 12-24-54.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1c0c1fe2-a87a-4225-b69a-e1cf70b9f21d/Screenshot_from_2021-09-29_12-24-54.png)
         
         1. There is a problem with this method of quantization. Consider at t = 1 second, the input is 9, therefore the throttle would be set to 1, at t = 1.1 second, the input is 11, then the throttle would set to 2 and at t = 1.2, the input again goes back to 9 and then throttle will again switch back to 1.
         2. These rapid changes to the throttle are not allowed by the physical system. Therefore, the quantize method will have to handle such boundary condition. 
